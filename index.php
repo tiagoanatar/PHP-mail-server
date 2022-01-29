@@ -9,18 +9,6 @@ if (empty($_POST['name']) && empty($_POST['email'])) die();
 
 if ($_POST)
 	{
-
-	// image upload - THIS IS BLOCKING THE MAIL SENT. 
-	/*
-	$DIR = "/";
-	$req = $_POST['file']
-	$file_chunks = explode(";base64,", $req->image);
-	$fileType = explode("image/", $file_chunks[0]);
-	$image_type = $fileType[1];
-	$base64Img = base64_decode($file_chunks[1]);
-	$file = $DIR . uniqid() . '.jpg';
-	file_put_contents($file, $base64Img); 
-	*/
 	// set response code - 200 OK
 	http_response_code(200);
 	$subject = 'Parts App Message' . $_POST['name'];
